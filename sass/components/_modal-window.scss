@@ -37,10 +37,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
  }
- .close-icon:hover {
-    fill: #2196F3;
-    cursor: pointer;
- }
+ 
  .close-icon {
     position: absolute;
     top: 50%;
@@ -49,6 +46,11 @@
     width: 17px;
     height: 17px;
     fill: #000000;
+    transition:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+      fill: #2196F3;
+      cursor: pointer;
+   }
  }
  .is-hidden {
     opacity: 0;
@@ -92,20 +94,20 @@
     padding-bottom: 12px;
     padding-left: 42px; 
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
- .form-input:hover  {
+    &:hover  {
     cursor: pointer;
     border: 1px solid rgba(33, 150, 243, 1);
- }
- .form-input:focus {
+    }
+    &:focus {
     outline-color: rgba(33, 150, 243, 1);
- }
- .form-input:hover + .input-icon {
+    }
+   &:hover + .input-icon {
     fill:  #2196F3;
- }
- .form-input:focus  + .input-icon {
+    }
+    &:focus  + .input-icon {
     fill:  #2196F3;
- }
+    }
+   }
  .coments {
     width: 100%;
     height: 120px;
@@ -115,46 +117,48 @@
     margin-top: 4px;
     padding-top: 12px;
     padding-left: 16px;  
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      cursor: pointer;
+      border: 1px solid rgba(33, 150, 243, 1);
+   }
+    &:focus {
+      outline-color: rgba(33, 150, 243, 1);
+   }
  }
- .coments:hover {
-    cursor: pointer;
-    border: 1px solid rgba(33, 150, 243, 1);
- }
- .coments:focus {
-    outline-color: rgba(33, 150, 243, 1);
- }
+
  .modal-form {
     margin-top: 12px;
  }
  .label {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.4;
+    line-height: 0.4;
     letter-spacing: 0.01em;
     color: #757575;  
  }
  .checkbox {
-    margin-top: 20px;
     border: none;
     display: flex;
     justify-content: center;
+    p {
+      margin-left: 9px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      color: #757575;
+   }
+   a {
+      color: #2196F3;
+   }
  }
- .checkbox>p {
-    margin-left: 9px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: #757575;
- }
- .checkbox>p>a {
-    color: #2196F3;
- }
+
  .modal-btn {
     display: block;
     min-width: 200px;
-    padding: 18px, 55px;
+    padding: 10px, 55px;
     margin: 0 auto;
     margin-top: 30px;
     color: white;

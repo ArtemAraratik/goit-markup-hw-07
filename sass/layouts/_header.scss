@@ -20,6 +20,7 @@
    color: var(--logo-web-color);
    text-decoration: none;
    margin-right: 93px;
+   
 }
 .logo-web-footer{  
    font-family: 'Raleway';
@@ -31,11 +32,17 @@
    color: var(--logo-web-color);
    text-decoration: none;
    margin-right: 93px;
+   &:hover, &:focus{
+      color: var(--logo-web-color);
+   }
 }
 .logo-studio {
     color: #212121;
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+      color: var(--logo-web-color);
+   }
 }
 .logo-studio-footer {
    font-family: 'Raleway';
@@ -48,27 +55,24 @@
    text-decoration: none;
    color: white;
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   &:hover, &:focus {
+      color: #2196F3
+   }
 }
-.logo-web:hover, .logo-web:focus{
-   color: var(--logo-web-color);
-}
-.logo-studio:hover, .logo-studio:focus {
-   color: var(--logo-web-color);
-}
-.logo-studio-footer:hover, .logo-studio-footer:focus {
-   color: #2196F3
-}
+
+
 
 /* menu-nav */
 .nav-list { 
    list-style: none;
    display: flex;
 }
-.nav-item:not(:last-child){
-margin-right: 50px; 
-}
+
 .nav-item {
 position: relative;
+  &:not(:last-child){
+   margin-right: 50px; 
+   }
 }
 .nav-link {
     font-family: 'Roboto';
@@ -80,9 +84,7 @@ position: relative;
     color: #000000;
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link::after {
+   &::after {
    content: "";
    display: block;
    position: absolute;
@@ -92,21 +94,19 @@ position: relative;
    top: 44px;
    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link:hover::after {
+  &:hover::after {
    width: 100%;
 }
-.nav-link:focus:after {
+  &:focus:after {
    opacity: 1;
 }
-
-
- .nav-link:hover, .nav-link:focus {
+ &:hover, &:focus {
     color:#2196F3;
  }
+}
  .current {
    color: #2196F3;
- }
- .current::after {
+   &t::after {
    content: "";
    display: block;
    position: absolute;
@@ -114,7 +114,8 @@ position: relative;
    height: 4px;
    background-color: #2196F3;
    top: 44px;
-}
+   }
+ } 
  .header-contact-list {
    display: flex;  
    margin-left: auto;
@@ -130,10 +131,10 @@ position: relative;
     display: flex;
     align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
- .header-contact-link:hover, .header-contact-link:focus {
+    &:hover, &:focus {
     color:var(--logo-web-color);
  }
+}
 
 .icon {
   margin-right: 10px;
